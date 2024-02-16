@@ -1,9 +1,10 @@
 import { RecipeInfo } from "./RecipeInfo";
 import { HiOutlineChartBar, HiOutlineChartPie } from 'react-icons/hi';
 import { BsAlarm } from 'react-icons/bs';
+import { List } from "./Recipe.styled";
 export function Recipe({recipe}){
     return(
-        <ul>
+        <List>
             {recipe.map(({name, time, servings, calories, image, difficulty})=>{
                 return <RecipeInfo
                 key={name}
@@ -18,7 +19,7 @@ export function Recipe({recipe}){
                 iconPie={HiOutlineChartPie}
                  />
             })}
-        </ul>
+        </List>
 
     )
 }
